@@ -65,30 +65,32 @@ dark_css = """
         border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
     }
     
-    /* Segmented Pill / Capsule Tab Architecture (Universal Selectors for Cloud & Local) */
+    /* Segmented Pill / Capsule Tab Architecture (Max Specificity for Cloud & Local) */
+    .stApp div[data-testid="stTabs"] [role="tablist"],
+    .stApp div[data-baseweb="tab-list"],
+    .stApp div[role="tablist"],
     div[data-testid="stTabs"] [role="tablist"],
     div[data-baseweb="tab-list"],
     div[role="tablist"] {
         display: flex !important;
         gap: 12px !important;
         background: transparent !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-bottom: none !important;
         padding: 0.6rem 0 1rem 0 !important;
         margin-bottom: 1.5rem !important;
         overflow-x: auto !important;
     }
 
-    div[data-testid="stTabs"] [role="tablist"] {
-        gap: 12px !important;
-        border-bottom: none !important;
-    }
-
+    .stApp div[data-testid="stTabs"] button,
+    .stApp div[data-testid="stTabs"] button[role="tab"],
+    .stApp button[data-baseweb="tab"],
+    .stApp button[role="tab"],
     div[data-testid="stTabs"] button,
     div[data-testid="stTabs"] button[role="tab"],
     button[data-baseweb="tab"],
     button[role="tab"] {
-        background: rgba(30, 41, 59, 0.65) !important;
-        border: 1px solid rgba(255, 255, 255, 0.14) !important;
+        background: rgba(30, 41, 59, 0.75) !important;
+        border: 1px solid rgba(255, 255, 255, 0.16) !important;
         border-radius: 10px !important;
         padding: 0.65rem 1.25rem !important;
         color: #94a3b8 !important;
@@ -96,20 +98,28 @@ dark_css = """
         font-size: 0.90rem !important;
         white-space: nowrap !important;
         transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
     }
 
+    .stApp div[data-testid="stTabs"] button:hover,
+    .stApp div[data-testid="stTabs"] button[role="tab"]:hover,
+    .stApp button[data-baseweb="tab"]:hover,
+    .stApp button[role="tab"]:hover,
     div[data-testid="stTabs"] button:hover,
     div[data-testid="stTabs"] button[role="tab"]:hover,
     button[data-baseweb="tab"]:hover,
     button[role="tab"]:hover {
-        background: rgba(56, 189, 248, 0.15) !important;
-        border-color: rgba(56, 189, 248, 0.4) !important;
+        background: rgba(56, 189, 248, 0.18) !important;
+        border-color: rgba(56, 189, 248, 0.5) !important;
         color: #f8fafc !important;
         transform: translateY(-2px) !important;
-        box-shadow: 0 6px 16px rgba(56, 189, 248, 0.2) !important;
+        box-shadow: 0 6px 16px rgba(56, 189, 248, 0.25) !important;
     }
 
+    .stApp div[data-testid="stTabs"] button[aria-selected="true"],
+    .stApp div[data-testid="stTabs"] button[role="tab"][aria-selected="true"],
+    .stApp button[data-baseweb="tab"][aria-selected="true"],
+    .stApp button[role="tab"][aria-selected="true"],
     div[data-testid="stTabs"] button[aria-selected="true"],
     div[data-testid="stTabs"] button[role="tab"][aria-selected="true"],
     button[data-baseweb="tab"][aria-selected="true"],
@@ -118,10 +128,13 @@ dark_css = """
         border: 1.5px solid #38bdf8 !important;
         color: #38bdf8 !important;
         font-weight: 700 !important;
-        box-shadow: 0 4px 18px rgba(56, 189, 248, 0.3) !important;
+        box-shadow: 0 4px 18px rgba(56, 189, 248, 0.35) !important;
         transform: translateY(-1px) !important;
     }
 
+    .stApp div[data-testid="stTabs"] button p,
+    .stApp button[data-baseweb="tab"] p,
+    .stApp button[role="tab"] p,
     div[data-testid="stTabs"] button p,
     button[data-baseweb="tab"] p,
     button[role="tab"] p {
@@ -129,13 +142,24 @@ dark_css = """
         font-weight: inherit !important;
         font-size: 0.90rem !important;
         margin: 0 !important;
+        text-decoration: none !important;
     }
 
+    /* Completely Eliminate Flat Underline Bar */
+    .stApp [data-baseweb="tab-highlight"], 
+    .stApp [data-baseweb="tab-border"],
+    .stApp div[data-testid="stTabs"] [data-baseweb="tab-highlight"],
+    .stApp div[data-testid="stTabs"] [data-baseweb="tab-border"],
+    .stApp div[data-testid="stTabs"] div[aria-hidden="true"],
     div[data-baseweb="tab-highlight"], 
     div[data-baseweb="tab-border"],
     div[data-testid="stTabs"] [data-baseweb="tab-highlight"],
     div[data-testid="stTabs"] hr {
         display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
     }
     
     code, pre, .stCodeBlock {
@@ -329,24 +353,26 @@ light_css = """
         border-right: 1px solid #e2e8f0 !important;
     }
 
-    /* Segmented Pill / Capsule Tab Architecture (Light Mode - Universal Selectors for Cloud & Local) */
+    /* Segmented Pill / Capsule Tab Architecture (Light Mode - Max Specificity for Cloud & Local) */
+    .stApp div[data-testid="stTabs"] [role="tablist"],
+    .stApp div[data-baseweb="tab-list"],
+    .stApp div[role="tablist"],
     div[data-testid="stTabs"] [role="tablist"],
     div[data-baseweb="tab-list"],
     div[role="tablist"] {
         display: flex !important;
         gap: 12px !important;
         background: transparent !important;
-        border-bottom: 1px solid #e2e8f0 !important;
+        border-bottom: none !important;
         padding: 0.6rem 0 1rem 0 !important;
         margin-bottom: 1.5rem !important;
         overflow-x: auto !important;
     }
 
-    div[data-testid="stTabs"] [role="tablist"] {
-        gap: 12px !important;
-        border-bottom: none !important;
-    }
-
+    .stApp div[data-testid="stTabs"] button,
+    .stApp div[data-testid="stTabs"] button[role="tab"],
+    .stApp button[data-baseweb="tab"],
+    .stApp button[role="tab"],
     div[data-testid="stTabs"] button,
     div[data-testid="stTabs"] button[role="tab"],
     button[data-baseweb="tab"],
@@ -360,9 +386,13 @@ light_css = """
         font-size: 0.90rem !important;
         white-space: nowrap !important;
         transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
     }
 
+    .stApp div[data-testid="stTabs"] button:hover,
+    .stApp div[data-testid="stTabs"] button[role="tab"]:hover,
+    .stApp button[data-baseweb="tab"]:hover,
+    .stApp button[role="tab"]:hover,
     div[data-testid="stTabs"] button:hover,
     div[data-testid="stTabs"] button[role="tab"]:hover,
     button[data-baseweb="tab"]:hover,
@@ -371,9 +401,13 @@ light_css = """
         border-color: #0284c7 !important;
         color: #0f172a !important;
         transform: translateY(-2px) !important;
-        box-shadow: 0 4px 12px rgba(2, 132, 199, 0.12) !important;
+        box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15) !important;
     }
 
+    .stApp div[data-testid="stTabs"] button[aria-selected="true"],
+    .stApp div[data-testid="stTabs"] button[role="tab"][aria-selected="true"],
+    .stApp button[data-baseweb="tab"][aria-selected="true"],
+    .stApp button[role="tab"][aria-selected="true"],
     div[data-testid="stTabs"] button[aria-selected="true"],
     div[data-testid="stTabs"] button[role="tab"][aria-selected="true"],
     button[data-baseweb="tab"][aria-selected="true"],
@@ -382,10 +416,13 @@ light_css = """
         border: 1.5px solid #0284c7 !important;
         color: #0284c7 !important;
         font-weight: 700 !important;
-        box-shadow: 0 4px 16px rgba(2, 132, 199, 0.2) !important;
+        box-shadow: 0 4px 16px rgba(2, 132, 199, 0.22) !important;
         transform: translateY(-1px) !important;
     }
 
+    .stApp div[data-testid="stTabs"] button p,
+    .stApp button[data-baseweb="tab"] p,
+    .stApp button[role="tab"] p,
     div[data-testid="stTabs"] button p,
     button[data-baseweb="tab"] p,
     button[role="tab"] p {
@@ -393,13 +430,24 @@ light_css = """
         font-weight: inherit !important;
         font-size: 0.90rem !important;
         margin: 0 !important;
+        text-decoration: none !important;
     }
 
+    /* Completely Eliminate Flat Underline Bar */
+    .stApp [data-baseweb="tab-highlight"], 
+    .stApp [data-baseweb="tab-border"],
+    .stApp div[data-testid="stTabs"] [data-baseweb="tab-highlight"],
+    .stApp div[data-testid="stTabs"] [data-baseweb="tab-border"],
+    .stApp div[data-testid="stTabs"] div[aria-hidden="true"],
     div[data-baseweb="tab-highlight"], 
     div[data-baseweb="tab-border"],
     div[data-testid="stTabs"] [data-baseweb="tab-highlight"],
     div[data-testid="stTabs"] hr {
         display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
     }
 
     p, span, label, h1, h2, h3, h4, h5, h6 {
@@ -869,9 +917,10 @@ with banner_col_right:
     meta_sub1, meta_sub2 = st.columns([2.1, 0.9])
     with meta_sub1:
         st.markdown(f"""
-            <div style="text-align: right; padding-top: 1.1rem;">
+            <div style="text-align: right; padding-top: 0.95rem;">
                 <span style="font-size: 0.88rem; color: {'#38bdf8' if is_dark else '#0284c7'}; font-weight: 700;">Academic Year 2026–27</span><br>
-                <span style="font-size: 0.78rem; color: {'#94a3b8' if is_dark else '#64748b'};">SE IT • Semester III</span>
+                <span style="font-size: 0.78rem; color: {'#94a3b8' if is_dark else '#64748b'};">SE IT • Semester III</span><br>
+                <span style="display: inline-block; font-size: 0.68rem; font-weight: 600; color: {'#38bdf8' if is_dark else '#0284c7'}; background: {'rgba(56, 189, 248, 0.15)' if is_dark else 'rgba(2, 132, 199, 0.1)'}; border: 1px solid {'rgba(56, 189, 248, 0.35)' if is_dark else 'rgba(2, 132, 199, 0.25)'}; padding: 1px 7px; border-radius: 9999px; margin-top: 3px;">v2.1 • Production UI</span>
             </div>
         """, unsafe_allow_html=True)
     with meta_sub2:
