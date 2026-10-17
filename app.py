@@ -65,101 +65,58 @@ dark_css = """
         border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
     }
     
-    /* Segmented Pill / Capsule Tab Architecture (Max Specificity for Cloud & Local) */
-    .stApp div[data-testid="stTabs"] [role="tablist"],
-    .stApp div[data-baseweb="tab-list"],
-    .stApp div[role="tablist"],
-    div[data-testid="stTabs"] [role="tablist"],
-    div[data-baseweb="tab-list"],
-    div[role="tablist"] {
-        display: flex !important;
-        gap: 12px !important;
-        background: transparent !important;
-        border-bottom: none !important;
-        padding: 0.6rem 0 1rem 0 !important;
-        margin-bottom: 1.5rem !important;
-        overflow-x: auto !important;
-    }
-
-    .stApp div[data-testid="stTabs"] button,
-    .stApp div[data-testid="stTabs"] button[role="tab"],
-    .stApp button[data-baseweb="tab"],
-    .stApp button[role="tab"],
-    div[data-testid="stTabs"] button,
-    div[data-testid="stTabs"] button[role="tab"],
-    button[data-baseweb="tab"],
-    button[role="tab"] {
-        background: rgba(30, 41, 59, 0.75) !important;
-        border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    /* Segmented Pill Navigation Bar Buttons */
+    div.st-key-nav_pill_btn_0 button,
+    div.st-key-nav_pill_btn_1 button,
+    div.st-key-nav_pill_btn_2 button,
+    div.st-key-nav_pill_btn_3 button,
+    div.st-key-nav_pill_btn_4 button,
+    div.st-key-nav_pill_btn_5 button {
         border-radius: 10px !important;
-        padding: 0.65rem 1.25rem !important;
-        color: #94a3b8 !important;
-        font-weight: 500 !important;
-        font-size: 0.90rem !important;
-        white-space: nowrap !important;
-        transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+        padding: 0.65rem 0.5rem !important;
+        font-size: 0.86rem !important;
+        white-space: normal !important;
+        min-height: 48px !important;
+        height: auto !important;
+        line-height: 1.25 !important;
+        text-align: center !important;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
     }
-
-    .stApp div[data-testid="stTabs"] button:hover,
-    .stApp div[data-testid="stTabs"] button[role="tab"]:hover,
-    .stApp button[data-baseweb="tab"]:hover,
-    .stApp button[role="tab"]:hover,
-    div[data-testid="stTabs"] button:hover,
-    div[data-testid="stTabs"] button[role="tab"]:hover,
-    button[data-baseweb="tab"]:hover,
-    button[role="tab"]:hover {
+    div.st-key-nav_pill_btn_0 button[kind="secondary"],
+    div.st-key-nav_pill_btn_1 button[kind="secondary"],
+    div.st-key-nav_pill_btn_2 button[kind="secondary"],
+    div.st-key-nav_pill_btn_3 button[kind="secondary"],
+    div.st-key-nav_pill_btn_4 button[kind="secondary"],
+    div.st-key-nav_pill_btn_5 button[kind="secondary"] {
+        background: rgba(30, 41, 59, 0.75) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        color: #94a3b8 !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+    }
+    div.st-key-nav_pill_btn_0 button[kind="secondary"]:hover,
+    div.st-key-nav_pill_btn_1 button[kind="secondary"]:hover,
+    div.st-key-nav_pill_btn_2 button[kind="secondary"]:hover,
+    div.st-key-nav_pill_btn_3 button[kind="secondary"]:hover,
+    div.st-key-nav_pill_btn_4 button[kind="secondary"]:hover,
+    div.st-key-nav_pill_btn_5 button[kind="secondary"]:hover {
         background: rgba(56, 189, 248, 0.18) !important;
         border-color: rgba(56, 189, 248, 0.5) !important;
         color: #f8fafc !important;
         transform: translateY(-2px) !important;
         box-shadow: 0 6px 16px rgba(56, 189, 248, 0.25) !important;
     }
-
-    .stApp div[data-testid="stTabs"] button[aria-selected="true"],
-    .stApp div[data-testid="stTabs"] button[role="tab"][aria-selected="true"],
-    .stApp button[data-baseweb="tab"][aria-selected="true"],
-    .stApp button[role="tab"][aria-selected="true"],
-    div[data-testid="stTabs"] button[aria-selected="true"],
-    div[data-testid="stTabs"] button[role="tab"][aria-selected="true"],
-    button[data-baseweb="tab"][aria-selected="true"],
-    button[role="tab"][aria-selected="true"] {
-        background: linear-gradient(135deg, rgba(56, 189, 248, 0.25), rgba(14, 165, 233, 0.15)) !important;
+    div.st-key-nav_pill_btn_0 button[kind="primary"],
+    div.st-key-nav_pill_btn_1 button[kind="primary"],
+    div.st-key-nav_pill_btn_2 button[kind="primary"],
+    div.st-key-nav_pill_btn_3 button[kind="primary"],
+    div.st-key-nav_pill_btn_4 button[kind="primary"],
+    div.st-key-nav_pill_btn_5 button[kind="primary"] {
+        background: linear-gradient(135deg, rgba(56, 189, 248, 0.3), rgba(14, 165, 233, 0.18)) !important;
         border: 1.5px solid #38bdf8 !important;
         color: #38bdf8 !important;
         font-weight: 700 !important;
         box-shadow: 0 4px 18px rgba(56, 189, 248, 0.35) !important;
         transform: translateY(-1px) !important;
-    }
-
-    .stApp div[data-testid="stTabs"] button p,
-    .stApp button[data-baseweb="tab"] p,
-    .stApp button[role="tab"] p,
-    div[data-testid="stTabs"] button p,
-    button[data-baseweb="tab"] p,
-    button[role="tab"] p {
-        color: inherit !important;
-        font-weight: inherit !important;
-        font-size: 0.90rem !important;
-        margin: 0 !important;
-        text-decoration: none !important;
-    }
-
-    /* Completely Eliminate Flat Underline Bar */
-    .stApp [data-baseweb="tab-highlight"], 
-    .stApp [data-baseweb="tab-border"],
-    .stApp div[data-testid="stTabs"] [data-baseweb="tab-highlight"],
-    .stApp div[data-testid="stTabs"] [data-baseweb="tab-border"],
-    .stApp div[data-testid="stTabs"] div[aria-hidden="true"],
-    div[data-baseweb="tab-highlight"], 
-    div[data-baseweb="tab-border"],
-    div[data-testid="stTabs"] [data-baseweb="tab-highlight"],
-    div[data-testid="stTabs"] hr {
-        display: none !important;
-        opacity: 0 !important;
-        visibility: hidden !important;
-        height: 0 !important;
-        width: 0 !important;
     }
     
     code, pre, .stCodeBlock {
@@ -353,101 +310,58 @@ light_css = """
         border-right: 1px solid #e2e8f0 !important;
     }
 
-    /* Segmented Pill / Capsule Tab Architecture (Light Mode - Max Specificity for Cloud & Local) */
-    .stApp div[data-testid="stTabs"] [role="tablist"],
-    .stApp div[data-baseweb="tab-list"],
-    .stApp div[role="tablist"],
-    div[data-testid="stTabs"] [role="tablist"],
-    div[data-baseweb="tab-list"],
-    div[role="tablist"] {
-        display: flex !important;
-        gap: 12px !important;
-        background: transparent !important;
-        border-bottom: none !important;
-        padding: 0.6rem 0 1rem 0 !important;
-        margin-bottom: 1.5rem !important;
-        overflow-x: auto !important;
+    /* Segmented Pill Navigation Bar Buttons (Light Mode) */
+    div.st-key-nav_pill_btn_0 button,
+    div.st-key-nav_pill_btn_1 button,
+    div.st-key-nav_pill_btn_2 button,
+    div.st-key-nav_pill_btn_3 button,
+    div.st-key-nav_pill_btn_4 button,
+    div.st-key-nav_pill_btn_5 button {
+        border-radius: 10px !important;
+        padding: 0.65rem 0.5rem !important;
+        font-size: 0.86rem !important;
+        white-space: normal !important;
+        min-height: 48px !important;
+        height: auto !important;
+        line-height: 1.25 !important;
+        text-align: center !important;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
     }
-
-    .stApp div[data-testid="stTabs"] button,
-    .stApp div[data-testid="stTabs"] button[role="tab"],
-    .stApp button[data-baseweb="tab"],
-    .stApp button[role="tab"],
-    div[data-testid="stTabs"] button,
-    div[data-testid="stTabs"] button[role="tab"],
-    button[data-baseweb="tab"],
-    button[role="tab"] {
+    div.st-key-nav_pill_btn_0 button[kind="secondary"],
+    div.st-key-nav_pill_btn_1 button[kind="secondary"],
+    div.st-key-nav_pill_btn_2 button[kind="secondary"],
+    div.st-key-nav_pill_btn_3 button[kind="secondary"],
+    div.st-key-nav_pill_btn_4 button[kind="secondary"],
+    div.st-key-nav_pill_btn_5 button[kind="secondary"] {
         background: #f1f5f9 !important;
         border: 1px solid #cbd5e1 !important;
-        border-radius: 10px !important;
-        padding: 0.65rem 1.25rem !important;
         color: #475569 !important;
-        font-weight: 500 !important;
-        font-size: 0.90rem !important;
-        white-space: nowrap !important;
-        transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
     }
-
-    .stApp div[data-testid="stTabs"] button:hover,
-    .stApp div[data-testid="stTabs"] button[role="tab"]:hover,
-    .stApp button[data-baseweb="tab"]:hover,
-    .stApp button[role="tab"]:hover,
-    div[data-testid="stTabs"] button:hover,
-    div[data-testid="stTabs"] button[role="tab"]:hover,
-    button[data-baseweb="tab"]:hover,
-    button[role="tab"]:hover {
+    div.st-key-nav_pill_btn_0 button[kind="secondary"]:hover,
+    div.st-key-nav_pill_btn_1 button[kind="secondary"]:hover,
+    div.st-key-nav_pill_btn_2 button[kind="secondary"]:hover,
+    div.st-key-nav_pill_btn_3 button[kind="secondary"]:hover,
+    div.st-key-nav_pill_btn_4 button[kind="secondary"]:hover,
+    div.st-key-nav_pill_btn_5 button[kind="secondary"]:hover {
         background: #e2e8f0 !important;
         border-color: #0284c7 !important;
         color: #0f172a !important;
         transform: translateY(-2px) !important;
         box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15) !important;
     }
-
-    .stApp div[data-testid="stTabs"] button[aria-selected="true"],
-    .stApp div[data-testid="stTabs"] button[role="tab"][aria-selected="true"],
-    .stApp button[data-baseweb="tab"][aria-selected="true"],
-    .stApp button[role="tab"][aria-selected="true"],
-    div[data-testid="stTabs"] button[aria-selected="true"],
-    div[data-testid="stTabs"] button[role="tab"][aria-selected="true"],
-    button[data-baseweb="tab"][aria-selected="true"],
-    button[role="tab"][aria-selected="true"] {
+    div.st-key-nav_pill_btn_0 button[kind="primary"],
+    div.st-key-nav_pill_btn_1 button[kind="primary"],
+    div.st-key-nav_pill_btn_2 button[kind="primary"],
+    div.st-key-nav_pill_btn_3 button[kind="primary"],
+    div.st-key-nav_pill_btn_4 button[kind="primary"],
+    div.st-key-nav_pill_btn_5 button[kind="primary"] {
         background: #ffffff !important;
         border: 1.5px solid #0284c7 !important;
         color: #0284c7 !important;
         font-weight: 700 !important;
         box-shadow: 0 4px 16px rgba(2, 132, 199, 0.22) !important;
         transform: translateY(-1px) !important;
-    }
-
-    .stApp div[data-testid="stTabs"] button p,
-    .stApp button[data-baseweb="tab"] p,
-    .stApp button[role="tab"] p,
-    div[data-testid="stTabs"] button p,
-    button[data-baseweb="tab"] p,
-    button[role="tab"] p {
-        color: inherit !important;
-        font-weight: inherit !important;
-        font-size: 0.90rem !important;
-        margin: 0 !important;
-        text-decoration: none !important;
-    }
-
-    /* Completely Eliminate Flat Underline Bar */
-    .stApp [data-baseweb="tab-highlight"], 
-    .stApp [data-baseweb="tab-border"],
-    .stApp div[data-testid="stTabs"] [data-baseweb="tab-highlight"],
-    .stApp div[data-testid="stTabs"] [data-baseweb="tab-border"],
-    .stApp div[data-testid="stTabs"] div[aria-hidden="true"],
-    div[data-baseweb="tab-highlight"], 
-    div[data-baseweb="tab-border"],
-    div[data-testid="stTabs"] [data-baseweb="tab-highlight"],
-    div[data-testid="stTabs"] hr {
-        display: none !important;
-        opacity: 0 !important;
-        visibility: hidden !important;
-        height: 0 !important;
-        width: 0 !important;
     }
 
     p, span, label, h1, h2, h3, h4, h5, h6 {
@@ -932,22 +846,49 @@ with banner_col_right:
 
 
 # -----------------------------------------------------------------------------
-# 8. TABBED NAVIGATION ARCHITECTURE (NO "MODULE" WORD, CLEAN TEXT LABELS)
+# 8. SEGMENTED PILL BUTTON NAVIGATION BAR (100% RELIABLE NATIVE STATE ENGINE)
 # -----------------------------------------------------------------------------
-tab_overview, tab_ds, tab_pmf, tab_cont, tab_mgf, tab_sim = st.tabs([
+nav_tabs = [
     "Overview & Foundations",
     "Dataset Viewer",
     "Discrete PMF (X)",
     "Continuous Delay (Y) & Moments",
     "Symbolic MGF Engine",
     "Overdue Risk Simulator"
-])
+]
+
+if "active_tab" not in st.session_state:
+    st.session_state.active_tab = nav_tabs[0]
+
+nav_cols = st.columns(len(nav_tabs))
+for idx, tab_name in enumerate(nav_tabs):
+    is_active = (st.session_state.active_tab == tab_name)
+    with nav_cols[idx]:
+        if st.button(
+            tab_name,
+            key=f"nav_pill_btn_{idx}",
+            use_container_width=True,
+            type="primary" if is_active else "secondary"
+        ):
+            if not is_active:
+                st.session_state.active_tab = tab_name
+                st.rerun()
+
+st.markdown("<div style='margin-bottom: 1.2rem;'></div>", unsafe_allow_html=True)
+
+# Navigation section flags
+tab_overview = (st.session_state.active_tab == "Overview & Foundations")
+tab_ds = (st.session_state.active_tab == "Dataset Viewer")
+tab_pmf = (st.session_state.active_tab == "Discrete PMF (X)")
+tab_cont = (st.session_state.active_tab == "Continuous Delay (Y) & Moments")
+tab_mgf = (st.session_state.active_tab == "Symbolic MGF Engine")
+tab_sim = (st.session_state.active_tab == "Overdue Risk Simulator")
 
 
 # =============================================================================
 # TAB 1: OVERVIEW & FOUNDATIONS
 # =============================================================================
-with tab_overview:
+if tab_overview:
     st.subheader("System Architecture & Applied Mathematics Mapping")
     
     col_arch1, col_arch2 = st.columns([1.2, 1.0])
@@ -1050,7 +991,7 @@ with tab_overview:
 # =============================================================================
 # TAB 2: DATASET VIEWER
 # =============================================================================
-with tab_ds:
+if tab_ds:
     st.subheader("Circulation Desk Dataset & Audit")
     st.markdown(r"""
         Gathered circulation desk logs ($N \ge 35$ records) recording borrowing duration (days) 
@@ -1158,7 +1099,7 @@ with tab_ds:
 # =============================================================================
 # TAB 3: DISCRETE PMF (X)
 # =============================================================================
-with tab_pmf:
+if tab_pmf:
     st.subheader("Discrete Random Variable (X) — Number of Books Borrowed")
     st.markdown(r"""
         Formulating discrete PMF for borrowing frequency.
@@ -1342,7 +1283,7 @@ with tab_pmf:
 # =============================================================================
 # TAB 4: CONTINUOUS DELAY (Y) & MOMENTS
 # =============================================================================
-with tab_cont:
+if tab_cont:
     st.subheader(f"Continuous Variable ({continuous_var_option}) — Distribution Fitting & Moments")
     st.markdown(f"""
         Fitting continuous Exponential and Gamma PDF distributions for overdue days, 
@@ -1536,7 +1477,7 @@ with tab_cont:
 # =============================================================================
 # TAB 5: SYMBOLIC MGF ENGINE
 # =============================================================================
-with tab_mgf:
+if tab_mgf:
     st.subheader("Symbolic Moment Generating Function (MGF) Engine")
     st.markdown(r"""
         Algebraic formulation of $M(t)$ and verifying mean/variance via $t \to 0$ differentiation 
@@ -1702,7 +1643,7 @@ with tab_mgf:
 # =============================================================================
 # TAB 6: OVERDUE RISK SIMULATOR
 # =============================================================================
-with tab_sim:
+if tab_sim:
     st.subheader("Overdue Tail Risk Simulator & Custom Loan Periods")
     st.markdown(r"""
         Visualizing holding time distributions and predicting overdue risk probabilities **for custom loan periods**.
