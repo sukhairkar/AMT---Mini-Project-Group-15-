@@ -65,8 +65,10 @@ dark_css = """
         border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
     }
     
-    /* Segmented Pill / Capsule Tab Architecture */
-    div[data-baseweb="tab-list"] {
+    /* Segmented Pill / Capsule Tab Architecture (Universal Selectors for Cloud & Local) */
+    div[data-testid="stTabs"] [role="tablist"],
+    div[data-baseweb="tab-list"],
+    div[role="tablist"] {
         display: flex !important;
         gap: 12px !important;
         background: transparent !important;
@@ -76,9 +78,17 @@ dark_css = """
         overflow-x: auto !important;
     }
 
-    button[data-baseweb="tab"] {
-        background: rgba(30, 41, 59, 0.6) !important;
-        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    div[data-testid="stTabs"] [role="tablist"] {
+        gap: 12px !important;
+        border-bottom: none !important;
+    }
+
+    div[data-testid="stTabs"] button,
+    div[data-testid="stTabs"] button[role="tab"],
+    button[data-baseweb="tab"],
+    button[role="tab"] {
+        background: rgba(30, 41, 59, 0.65) !important;
+        border: 1px solid rgba(255, 255, 255, 0.14) !important;
         border-radius: 10px !important;
         padding: 0.65rem 1.25rem !important;
         color: #94a3b8 !important;
@@ -89,7 +99,10 @@ dark_css = """
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
     }
 
-    button[data-baseweb="tab"]:hover {
+    div[data-testid="stTabs"] button:hover,
+    div[data-testid="stTabs"] button[role="tab"]:hover,
+    button[data-baseweb="tab"]:hover,
+    button[role="tab"]:hover {
         background: rgba(56, 189, 248, 0.15) !important;
         border-color: rgba(56, 189, 248, 0.4) !important;
         color: #f8fafc !important;
@@ -97,7 +110,10 @@ dark_css = """
         box-shadow: 0 6px 16px rgba(56, 189, 248, 0.2) !important;
     }
 
-    button[data-baseweb="tab"][aria-selected="true"] {
+    div[data-testid="stTabs"] button[aria-selected="true"],
+    div[data-testid="stTabs"] button[role="tab"][aria-selected="true"],
+    button[data-baseweb="tab"][aria-selected="true"],
+    button[role="tab"][aria-selected="true"] {
         background: linear-gradient(135deg, rgba(56, 189, 248, 0.25), rgba(14, 165, 233, 0.15)) !important;
         border: 1.5px solid #38bdf8 !important;
         color: #38bdf8 !important;
@@ -106,7 +122,19 @@ dark_css = """
         transform: translateY(-1px) !important;
     }
 
-    div[data-baseweb="tab-highlight"], div[data-baseweb="tab-border"] {
+    div[data-testid="stTabs"] button p,
+    button[data-baseweb="tab"] p,
+    button[role="tab"] p {
+        color: inherit !important;
+        font-weight: inherit !important;
+        font-size: 0.90rem !important;
+        margin: 0 !important;
+    }
+
+    div[data-baseweb="tab-highlight"], 
+    div[data-baseweb="tab-border"],
+    div[data-testid="stTabs"] [data-baseweb="tab-highlight"],
+    div[data-testid="stTabs"] hr {
         display: none !important;
     }
     
@@ -301,8 +329,10 @@ light_css = """
         border-right: 1px solid #e2e8f0 !important;
     }
 
-    /* Segmented Pill / Capsule Tab Architecture (Light Mode) */
-    div[data-baseweb="tab-list"] {
+    /* Segmented Pill / Capsule Tab Architecture (Light Mode - Universal Selectors for Cloud & Local) */
+    div[data-testid="stTabs"] [role="tablist"],
+    div[data-baseweb="tab-list"],
+    div[role="tablist"] {
         display: flex !important;
         gap: 12px !important;
         background: transparent !important;
@@ -312,7 +342,15 @@ light_css = """
         overflow-x: auto !important;
     }
 
-    button[data-baseweb="tab"] {
+    div[data-testid="stTabs"] [role="tablist"] {
+        gap: 12px !important;
+        border-bottom: none !important;
+    }
+
+    div[data-testid="stTabs"] button,
+    div[data-testid="stTabs"] button[role="tab"],
+    button[data-baseweb="tab"],
+    button[role="tab"] {
         background: #f1f5f9 !important;
         border: 1px solid #cbd5e1 !important;
         border-radius: 10px !important;
@@ -325,7 +363,10 @@ light_css = """
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
     }
 
-    button[data-baseweb="tab"]:hover {
+    div[data-testid="stTabs"] button:hover,
+    div[data-testid="stTabs"] button[role="tab"]:hover,
+    button[data-baseweb="tab"]:hover,
+    button[role="tab"]:hover {
         background: #e2e8f0 !important;
         border-color: #0284c7 !important;
         color: #0f172a !important;
@@ -333,7 +374,10 @@ light_css = """
         box-shadow: 0 4px 12px rgba(2, 132, 199, 0.12) !important;
     }
 
-    button[data-baseweb="tab"][aria-selected="true"] {
+    div[data-testid="stTabs"] button[aria-selected="true"],
+    div[data-testid="stTabs"] button[role="tab"][aria-selected="true"],
+    button[data-baseweb="tab"][aria-selected="true"],
+    button[role="tab"][aria-selected="true"] {
         background: #ffffff !important;
         border: 1.5px solid #0284c7 !important;
         color: #0284c7 !important;
@@ -342,7 +386,19 @@ light_css = """
         transform: translateY(-1px) !important;
     }
 
-    div[data-baseweb="tab-highlight"], div[data-baseweb="tab-border"] {
+    div[data-testid="stTabs"] button p,
+    button[data-baseweb="tab"] p,
+    button[role="tab"] p {
+        color: inherit !important;
+        font-weight: inherit !important;
+        font-size: 0.90rem !important;
+        margin: 0 !important;
+    }
+
+    div[data-baseweb="tab-highlight"], 
+    div[data-baseweb="tab-border"],
+    div[data-testid="stTabs"] [data-baseweb="tab-highlight"],
+    div[data-testid="stTabs"] hr {
         display: none !important;
     }
 
