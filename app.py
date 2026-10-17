@@ -65,7 +65,7 @@ dark_css = """
         border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
     }
     
-    /* Segmented Pill / Capsule Tab Architecture (Instant 0ms Client-Side Speed) */
+    /* Segmented Pill / Capsule Tab Architecture (Instant 0ms Client-Side Speed with Generous Spacing) */
     .stApp div[data-testid="stTabs"] [role="tablist"],
     .stApp div[data-baseweb="tab-list"],
     .stApp div[role="tablist"],
@@ -73,16 +73,16 @@ dark_css = """
     div[data-baseweb="tab-list"],
     div[role="tablist"] {
         display: flex !important;
-        gap: 12px !important;
+        gap: 18px !important;
         background: transparent !important;
         border-bottom: none !important;
-        padding: 0.6rem 0 1rem 0 !important;
-        margin-bottom: 1.5rem !important;
+        padding: 0.8rem 0 1.2rem 0 !important;
+        margin-bottom: 1.8rem !important;
         overflow-x: auto !important;
     }
 
     .stApp div[data-testid="stTabs"] [role="tablist"] {
-        gap: 12px !important;
+        gap: 18px !important;
         border-bottom: none !important;
     }
 
@@ -94,16 +94,23 @@ dark_css = """
     div[data-testid="stTabs"] button[role="tab"],
     button[data-baseweb="tab"],
     button[role="tab"] {
-        background: rgba(30, 41, 59, 0.75) !important;
-        border: 1px solid rgba(255, 255, 255, 0.16) !important;
-        border-radius: 10px !important;
-        padding: 0.65rem 1.25rem !important;
+        background: rgba(30, 41, 59, 0.8) !important;
+        border: 1.5px solid rgba(255, 255, 255, 0.18) !important;
+        border-radius: 12px !important;
+        padding: 0.72rem 1.4rem !important;
+        margin-right: 8px !important;
         color: #94a3b8 !important;
         font-weight: 500 !important;
         font-size: 0.90rem !important;
         white-space: nowrap !important;
         transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.28) !important;
+    }
+
+    .stApp div[data-testid="stTabs"] button:last-child,
+    .stApp div[data-testid="stTabs"] button[role="tab"]:last-child,
+    button[data-baseweb="tab"]:last-child {
+        margin-right: 0 !important;
     }
 
     .stApp div[data-testid="stTabs"] button:hover,
@@ -115,10 +122,10 @@ dark_css = """
     button[data-baseweb="tab"]:hover,
     button[role="tab"]:hover {
         background: rgba(56, 189, 248, 0.18) !important;
-        border-color: rgba(56, 189, 248, 0.5) !important;
+        border-color: rgba(56, 189, 248, 0.6) !important;
         color: #f8fafc !important;
         transform: translateY(-2px) !important;
-        box-shadow: 0 6px 16px rgba(56, 189, 248, 0.25) !important;
+        box-shadow: 0 6px 18px rgba(56, 189, 248, 0.3) !important;
     }
 
     .stApp div[data-testid="stTabs"] button[aria-selected="true"],
@@ -129,11 +136,11 @@ dark_css = """
     div[data-testid="stTabs"] button[role="tab"][aria-selected="true"],
     button[data-baseweb="tab"][aria-selected="true"],
     button[role="tab"][aria-selected="true"] {
-        background: linear-gradient(135deg, rgba(56, 189, 248, 0.25), rgba(14, 165, 233, 0.15)) !important;
-        border: 1.5px solid #38bdf8 !important;
+        background: linear-gradient(135deg, rgba(56, 189, 248, 0.30), rgba(14, 165, 233, 0.18)) !important;
+        border: 2px solid #38bdf8 !important;
         color: #38bdf8 !important;
         font-weight: 700 !important;
-        box-shadow: 0 4px 18px rgba(56, 189, 248, 0.35) !important;
+        box-shadow: 0 4px 20px rgba(56, 189, 248, 0.45) !important;
         transform: translateY(-1px) !important;
     }
 
@@ -358,7 +365,7 @@ light_css = """
         border-right: 1px solid #e2e8f0 !important;
     }
 
-    /* Segmented Pill / Capsule Tab Architecture (Light Mode - Instant 0ms Speed) */
+    /* Segmented Pill / Capsule Tab Architecture (Light Mode - Instant 0ms Speed with Generous Spacing) */
     .stApp div[data-testid="stTabs"] [role="tablist"],
     .stApp div[data-baseweb="tab-list"],
     .stApp div[role="tablist"],
@@ -366,16 +373,16 @@ light_css = """
     div[data-baseweb="tab-list"],
     div[role="tablist"] {
         display: flex !important;
-        gap: 12px !important;
+        gap: 18px !important;
         background: transparent !important;
         border-bottom: none !important;
-        padding: 0.6rem 0 1rem 0 !important;
-        margin-bottom: 1.5rem !important;
+        padding: 0.8rem 0 1.2rem 0 !important;
+        margin-bottom: 1.8rem !important;
         overflow-x: auto !important;
     }
 
     .stApp div[data-testid="stTabs"] [role="tablist"] {
-        gap: 12px !important;
+        gap: 18px !important;
         border-bottom: none !important;
     }
 
@@ -388,15 +395,22 @@ light_css = """
     button[data-baseweb="tab"],
     button[role="tab"] {
         background: #f1f5f9 !important;
-        border: 1px solid #cbd5e1 !important;
-        border-radius: 10px !important;
-        padding: 0.65rem 1.25rem !important;
+        border: 1.5px solid #cbd5e1 !important;
+        border-radius: 12px !important;
+        padding: 0.72rem 1.4rem !important;
+        margin-right: 8px !important;
         color: #475569 !important;
         font-weight: 500 !important;
         font-size: 0.90rem !important;
         white-space: nowrap !important;
         transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .stApp div[data-testid="stTabs"] button:last-child,
+    .stApp div[data-testid="stTabs"] button[role="tab"]:last-child,
+    button[data-baseweb="tab"]:last-child {
+        margin-right: 0 !important;
     }
 
     .stApp div[data-testid="stTabs"] button:hover,
@@ -411,7 +425,7 @@ light_css = """
         border-color: #0284c7 !important;
         color: #0f172a !important;
         transform: translateY(-2px) !important;
-        box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15) !important;
+        box-shadow: 0 4px 14px rgba(2, 132, 199, 0.18) !important;
     }
 
     .stApp div[data-testid="stTabs"] button[aria-selected="true"],
@@ -423,10 +437,10 @@ light_css = """
     button[data-baseweb="tab"][aria-selected="true"],
     button[role="tab"][aria-selected="true"] {
         background: #ffffff !important;
-        border: 1.5px solid #0284c7 !important;
+        border: 2px solid #0284c7 !important;
         color: #0284c7 !important;
         font-weight: 700 !important;
-        box-shadow: 0 4px 16px rgba(2, 132, 199, 0.22) !important;
+        box-shadow: 0 4px 18px rgba(2, 132, 199, 0.25) !important;
         transform: translateY(-1px) !important;
     }
 
